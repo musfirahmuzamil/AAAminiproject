@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 st.header("Chocolate Bar Ratings Data Visualization")
 
 st.write('Before you continue, please read the [terms and conditions](https://www.gnu.org/licenses/gpl-3.0.en.html)')
-    show = st.checkbox('I agree the terms and conditions')
+show = st.checkbox('I agree the terms and conditions')
     if show:
         option = st.sidebar.selectbox(
     'Select a classifier',
