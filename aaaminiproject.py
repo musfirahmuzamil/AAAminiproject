@@ -49,7 +49,7 @@ if show:
     
     option = st.sidebar.selectbox(
         'Select your page',
-        ['Home', 'Dataset', 'Scatterplot', 'Random Forest'])
+        ['Home', 'Dataset', 'Scatterplot'])
     
     if option=='Home':
       st.subheader('What is chocolate?')
