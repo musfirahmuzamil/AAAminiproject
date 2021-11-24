@@ -13,10 +13,8 @@ newcol = ['Company', 'Year', 'Cocoa Percent', 'Location', 'Rating', 'Bean Type',
 
 df = choco_data_raw.rename(columns = dict(zip(choco_data_raw.columns, newcol)))
 df['Cocoa Percent'] = df['Cocoa Percent'].replace('[%,]', '', regex=True).astype(float)
-pd.options.display.float_format = "{:,.2f}".format # WHY: doesn't work????
+pd.options.display.float_format = "{:,.2f}".format
 df['Year'] = df['Year'].apply(lambda x: str(x))
-# Try n error: clean data
-
 
 
 ### --- 'Home' page
@@ -98,8 +96,6 @@ if show:
       st.write(df)
       st.write('')
       st.write(df.describe())
-      # WHY: Can’t adjust dataframes decimal places
-      # Try n error: display top 5 uniques data based on columns
 
     #### --- Option 'Scatterplot'  
     if option=='Scatterplot':
@@ -118,5 +114,3 @@ if show:
           'y-axis', options = list(df.columns))
       histo = px.histogram(data_frame = df, x = x_axis, y = y_axis)
       st.plotly_chart(histo)
-    
-    # Try n error: Random forest, SVM, KNN
